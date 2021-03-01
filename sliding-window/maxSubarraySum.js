@@ -74,7 +74,7 @@ console.log(maxSubArraySum([], 4));
     for (let i = num; i < arr.length; i++) {
       tempSum = tempSum - arr[i - num] + arr[i];
       // ([2, 6, 9, 2, 1, 8, 5, 6, 3], 3)
-      //   |-sum-| (First Step => 2 + 6 + 9 = 17 (tempSum))
+      //   |-sum-| (First Step => 2 + 6 + 9 = 17 (tempSum / maxSum))
       // ([2, 6, 9, 2, 1, 8, 5, 6, 3], 3)
       //      |-sum-| (Next Step => 17 - 2 + 2 (tempSum - arr[i - num] + arr[i]))
       // Calculating new tempSum by subtracting oldest elem and adding the next elem to tempSum
