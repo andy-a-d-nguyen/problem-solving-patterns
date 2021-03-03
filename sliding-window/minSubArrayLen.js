@@ -38,8 +38,8 @@ function minSubArrayLen(arr, num) {
       end++;
       console.log(`If      --- Total: ${total} --- Start: ${start} --- End: ${end}`)
     } else if (total >= num) {
-      minLength = Math.min(minLength, end - start);
-      total -= arr[start];
+      minLength = Math.min(minLength, end - start); // every time condition total >= num is met, record minLength
+      total -= arr[start]; // subtract arr[start] => result: total < num => find a different total with potentially shorter minLength
       start++;
       console.log(`Else If --- Total: ${total} --- Start: ${start} --- End: ${end}`)
     } else {
