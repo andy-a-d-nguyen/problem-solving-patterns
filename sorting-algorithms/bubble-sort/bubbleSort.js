@@ -10,7 +10,7 @@ function bubbleSort(arr) {
   // NOTE: starts from arr.length - 1
   // The main purpose of this loop is to allow the inner loop to be run continuously until the array is sorted
   for (let i = arr.length - 1; i >= 0; i--) {
-    // NOTE: inner loop causes subsequent passes and does not need to consider anything after i because everything after i would have been sorted
+    // NOTE: inner loop does not need to consider anything from i onwards because everything from i onward would have been sorted
     for (let j = 0; j <= i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
         swap(arr, j, j + 1);
