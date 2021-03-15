@@ -39,3 +39,7 @@ Ex:
 ## Time Complexity
 
 O(n^2)
+
+## Other notes
+
+Insertion sort works well with arrays that have new numbers constantly added to it
