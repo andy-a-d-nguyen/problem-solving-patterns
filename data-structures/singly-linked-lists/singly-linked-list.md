@@ -11,6 +11,8 @@ Linked Lists consist of nodes and each node has a value and a pointer to another
     - [Popping Pseudocode](#popping-pseudocode)
   - [Shifting](#shifting)
     - [Shifting Pseudocode](#shifting-pseudocode)
+  - [Unshifting](#unshifting)
+    - [Unshifting Pseudocode](#unshifting-pseudocode)
 
 ## Comparison With Arrays
 
@@ -59,3 +61,17 @@ Removing a node from the beginning of a linked list
 - Set the head property to be the current head's next property
 - Decrement the length by 1
 - Return the value of the node removed
+
+## Unshifting
+
+Add a new node to the beginning of a linked list
+
+### Unshifting Pseudocode
+
+- The function should accept a value
+- Create a new node using the value passed to the function
+- If there is no head property on the list, set the head and tail to be the newly created node
+- Otherwise, set the newly created node's next property to be the current head property on the list
+- Set the head property on the list to be that newly created node
+- Increment length by 1
+- Return the list
