@@ -4,6 +4,14 @@ A data structure that contains a head, tail and length property
 
 Linked Lists consist of nodes and each node has a value and a pointer to another node or null
 
+- [Linked List](#linked-list)
+  - [Comparison With Arrays](#comparison-with-arrays)
+  - [Pushing a New Node Pseudocode](#pushing-a-new-node-pseudocode)
+  - [Popping a Node](#popping-a-node)
+    - [Popping Pseudocode](#popping-pseudocode)
+  - [Shifting](#shifting)
+    - [Shifting Pseudocode](#shifting-pseudocode)
+
 ## Comparison With Arrays
 
 Lists:
@@ -38,4 +46,16 @@ Removing a node from the end of a linked list
 - Set the next property of the 2nd to last node to be null
 - Set the tail to be the 2nd to last node
 - Decrement the length of the list by 1
+- Return the value of the node removed
+
+## Shifting
+
+Removing a node from the beginning of a linked list
+
+### Shifting Pseudocode
+
+- If there are no nodes, return undefined
+- Store the current head property in a variable
+- Set the head property to be the current head's next property
+- Decrement the length by 1
 - Return the value of the node removed
