@@ -79,6 +79,7 @@ class SinglyLinkedList {
     // return node removed
     return currentHead; // current head still points to the next node even though it is no longer part of the list
   }
+
   unshift(val) {
     // create a new node
     let newNode = new Node(val);
@@ -96,10 +97,46 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
+  get(i) {
+    // if index is out of bounds, return null
+    if (i < 0 || i >= this.length) {
+      return null;
+    }
+    // create a pointer at head
+    let current = this.head;
+    // create an index counter
+    let count = 0;
+    // while node is in the list (valid)
+    while (current) {
+      // if counter is equal to input index
+        // return node
+      if (count === i) {
+        return current;
+      }
+      // move to next node
+      current = current.next;
+      // increment count
+      count++;
+    }
+  }
+  /*
+  Alternative get implementation:
+    get(index){
+      if(index < 0 || index >= this.length) return null;
+      var counter = 0;
+      var current = this.head;
+      while(counter !== index){
+          current = current.next;
+          counter++;
+      }
+      return current;
+    }
+  */
 }
 
 var list = new SinglyLinkedList()
 list.push("HELLO")
 list.push("GOODBYE")
 
-console.log(list.unshift("AAAA"))
+console.log(list.get(1));

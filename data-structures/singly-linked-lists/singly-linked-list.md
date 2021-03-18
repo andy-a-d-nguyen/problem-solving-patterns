@@ -13,6 +13,8 @@ Linked Lists consist of nodes and each node has a value and a pointer to another
     - [Shifting Pseudocode](#shifting-pseudocode)
   - [Unshifting](#unshifting)
     - [Unshifting Pseudocode](#unshifting-pseudocode)
+  - [Get](#get)
+    - [Get Pseudocode](#get-pseudocode)
 
 ## Comparison With Arrays
 
@@ -75,3 +77,13 @@ Add a new node to the beginning of a linked list
 - Set the head property on the list to be that newly created node
 - Increment length by 1
 - Return the list
+
+## Get
+
+Retrieving a node by its position in a linked list
+
+### Get Pseudocode
+
+- The function should accept an index
+- If the index is less than zero or greater than or equal to the length of the list, return null
+- Loop through the list until you reach the index and return the node at that specific index
