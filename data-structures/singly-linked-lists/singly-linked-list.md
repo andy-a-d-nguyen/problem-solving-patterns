@@ -15,6 +15,8 @@ Linked Lists consist of nodes and each node has a value and a pointer to another
     - [Unshifting Pseudocode](#unshifting-pseudocode)
   - [Get](#get)
     - [Get Pseudocode](#get-pseudocode)
+  - [Set](#set)
+    - [Set Pseudocode](#set-pseudocode)
 
 ## Comparison With Arrays
 
@@ -87,3 +89,14 @@ Retrieving a node by its position in a linked list
 - The function should accept an index
 - If the index is less than zero or greater than or equal to the length of the list, return null
 - Loop through the list until you reach the index and return the node at that specific index
+
+## Set
+
+Changing the value of a node based on its position in a linked list
+
+### Set Pseudocode
+
+- The function should accept a value and an index
+- Use the get function to find the specific node
+- If the node is not found, return false
+- If the node is found, set the value of that node to be the value passed to the function and return true
