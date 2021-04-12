@@ -121,7 +121,7 @@ class SinglyLinkedList {
     }
   }
 
-  set(val, index) {
+  set(index, val) {
     // use the get function to find node at input index
     let node = this.get(index);
     // if node is not found, return false
@@ -155,6 +155,31 @@ class SinglyLinkedList {
     this.length++;
     return true;
   }
+
+  remove(index) {
+    if (index < 0 || index > this.length) return undefined;
+    if (index === this.length - 1) return this.pop();
+    if (index === 0) return this.shift();
+    // // get previous node
+    // let prev = this.get(index - 1);
+    // // get current node
+    // let current = this.get(index);
+    // // get next node
+    // let next = this.get(index + 1);
+    // // point previous node to next node
+    // prev.next = next;
+    // // point current node's next to null
+    // current.next = null;
+    // this.length--;
+    // return current.val;
+
+    // Alternative:
+    let prev = this.get(index - 1);
+    let removed = prev.next;
+    prev.next = removed.next;
+    this.length--;
+    return removed;
+  }
 }
 
 var list = new SinglyLinkedList()
@@ -163,6 +188,6 @@ list.push("GOODBYE")
 list.push("HELLO")
 list.push("GOODBYE")
 
-list.insert(1, 'INSERTED NODE')
+console.log(list.remove(1));
 
 console.log(list);
