@@ -17,6 +17,8 @@ Linked Lists consist of nodes and each node has a value and a pointer to another
     - [Get Pseudocode](#get-pseudocode)
   - [Set](#set)
     - [Set Pseudocode](#set-pseudocode)
+  - [Insert](#insert)
+    - [Insert Pseudocode](#insert-pseudocode)
 
 ## Comparison With Arrays
 
@@ -100,3 +102,18 @@ Changing the value of a node based on its position in a linked list
 - Use the get function to find the specific node
 - If the node is not found, return false
 - If the node is found, set the value of that node to be the value passed to the function and return true
+
+## Insert
+
+Adding a node to a linked list at a specific location
+
+### Insert Pseudocode
+
+- If the index is less than zero or greater than the length; return false
+- If the index is the same as the length, push a new node to the end of the list
+- If the index is 0, unshift a new node to the start of the list
+- Otherwise, using the get method, access the node at the index - 1
+- Set the next property on that node to be the new node
+- Set the next property on the new node to be the previous next
+- Increment the length
+- Return true
