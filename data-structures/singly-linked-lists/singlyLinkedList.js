@@ -180,14 +180,61 @@ class SinglyLinkedList {
     this.length--;
     return removed;
   }
+
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    let next;
+    // NOTE: must be set to null so that last node (tail) points to null
+    let prev = null;
+    while (node) {
+      // store the next node
+      next = node.next;
+      // point the ref to next node to the previous node
+      node.next = prev;
+      // set the previous node as the current node
+      prev = node;
+      // move to the next node
+      node = next;
+      // NOTE: Look ahead (find the next node), point the next node's ref to next to current node as loop runs
+      /*
+      First loop:
+      1   2   3
+      node: 1
+      node.next / next: 2
+      prev: initial = null
+            then    = 1 (prev = node)
+      Second loop:
+      1   2   3
+          node: 2
+          node.next / next: 3
+          prev: initial = 1
+                then    = 2 (prev = node)
+      */
+    }
+    return this;
+  }
+
+  print() {
+    let arr = [];
+    let current = this.head;
+    while (current) {
+      arr.push(current.val);
+      current = current.next;
+    }
+    console.log(arr);
+  }
 }
 
 var list = new SinglyLinkedList()
-list.push("HELLO")
-list.push("GOODBYE")
-list.push("HELLO")
-list.push("GOODBYE")
-
-console.log(list.remove(1));
+list.push("1")
+list.push("2")
+list.push("3")
+list.push("4")
 
 console.log(list);
+
+list.reverse();
+
+list.print();

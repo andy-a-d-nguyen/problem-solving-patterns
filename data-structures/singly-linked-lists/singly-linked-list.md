@@ -21,6 +21,9 @@ Linked Lists consist of nodes and each node has a value and a pointer to another
     - [Insert Pseudocode](#insert-pseudocode)
   - [Remove](#remove)
     - [Remove Pseudocode](#remove-pseudocode)
+  - [Reverse](#reverse)
+    - [Reverse Pseudocode](#reverse-pseudocode)
+  - [Big O](#big-o)
 
 ## Comparison With Arrays
 
@@ -133,3 +136,26 @@ Removing a node from the Linked List at a specific position
 - Set the next property on that node to be the next of the next node
 - Decrement the length
 - Return the value of the node removed
+
+## Reverse
+
+Reversing the Linked List in place
+
+### Reverse Pseudocode
+
+- Swap the head and the tail
+- Create a variable called next
+- Create a variable called prev
+- Create a variable called node and initialize it to the head property
+- Loop through the list
+- Set next to be the next property on whatever node is
+- Set the next property on the node to whatever prev is
+- Set prev to be the value of the node variable
+- Set the node variable to be the value of the next variable
+
+## Big O
+
+- Insertion - O(1) or O(n)
+- Removal - O(1) or O(n)
+- Searching - O(n)
+- Access - O(n)
