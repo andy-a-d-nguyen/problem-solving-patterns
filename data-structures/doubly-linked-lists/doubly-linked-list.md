@@ -4,6 +4,9 @@
   - [Comparisons with Singly Linked List](#comparisons-with-singly-linked-list)
   - [Pushing](#pushing)
     - [Pushing Pseudocode](#pushing-pseudocode)
+  - [Popping](#popping)
+    - [Popping Pseudocode](#popping-pseudocode)
+  - [Shifting](#shifting)
 
 ## Comparisons with Singly Linked List
 
@@ -23,3 +26,21 @@ Adding a node to the end of a Doubly Linked List
 - Set the tail to be the newly created node
 - Increment the length
 - Return the Doubly Linked List
+
+## Popping
+
+- Removing a node from the end of a Doubly Linked List
+
+### Popping Pseudocode
+
+- If there is no head, return undefined
+- Store the current tail in a variable to return later
+- If the length is 1, set the head and tail to be null
+- Update the tail to be the previous node
+- Set the new tail's next to null
+- Decrement the length
+- Return the value removed
+
+## Shifting
+
+Removing a node from the beginning of a Doubly Linked List
